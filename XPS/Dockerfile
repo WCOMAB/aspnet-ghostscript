@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble AS ghostpdl
+FROM mcr.microsoft.com/dotnet/aspnet:11.0-resolute AS ghostpdl
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -30,7 +30,7 @@ RUN wget -q -O ghostpdl.tar.xz https://github.com/ArtifexSoftware/ghostpdl-downl
     && make install \
     && ln -s gs /usr/local/bin/ghostscript
 
-FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble
+FROM mcr.microsoft.com/dotnet/aspnet:11.0-resolute
 
 RUN apt-get update \
     && apt-get upgrade -y \
