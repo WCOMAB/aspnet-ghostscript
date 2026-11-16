@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble
+FROM mcr.microsoft.com/dotnet/aspnet:11.0-resolute
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y --no-install-recommends ghostscript zbar-tools \
